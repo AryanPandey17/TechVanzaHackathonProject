@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab Test Booking</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="bg-white shadow-md">
+        <div class="container mx-auto flex items-center justify-between py-4">
+          <!-- Logo and Brand Name -->
+          <a class="flex items-center" href="/" style="text-decoration: none;">
+            <img src="../static/images/logo.png" alt="Gram Vaidya Logo" class="h-10 w-auto mr-2">
+            <span class="text-xl font-bold text-black">Gram Vaidya</span>
+          </a>
+          
+          
+          
+          <!-- Toggler Button for Mobile View -->
+          <button 
+            class="lg:hidden text-black focus:outline-none" 
+            type="button" 
+            data-bs-toggle="collapse" 
+            data-bs-target="#navbarNav">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+            </svg>
+          </button>
+          
+          <!-- Collapsible Links -->
+          <div class="hidden lg:flex space-x-6 items-center" id="navbarNav">
+            <ul class="flex space-x-6">
+              <li>
+                <a class="text-black hover:text-blue-500 font-medium !no-underline" href="/appointment">Appointment</a>
+              </li>
+              <li>
+                <a class="text-black hover:text-blue-500 font-medium !no-underline" href="/labtest">Lab Tests</a>
+              </li>
+              <li>
+                <a class="text-black hover:text-blue-500 font-medium !no-underline" href="/blogs">Blogs</a>
+              </li>
+              <li>
+                <a class="text-black hover:text-blue-500 font-medium !no-underline" href="/about">About Us</a>
+              </li>
+              <li>
+                <a class="text-black hover:text-blue-500 font-medium !no-underline" href="/contact">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      
+
+
+    <!-- Lab Tests Section -->
+    <div class="container my-5">
+        <h2 class="text-center mb-4">Available Lab Tests</h2>
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Complete Blood Count (CBC)</h5>
+                        <p class="card-text">A complete blood count (CBC) is a blood test used to evaluate your overall health and detect a wide range of disorders, including anemia, infection and leukemia.</p>
+                        <p class="card-text"><strong>Price:</strong> $50</p>
+                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#testModal" data-test="CBC">View Details</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Lipid Profile</h5>
+                        <p class="card-text">A lipid profile is a blood test that measures the levels of cholesterol and triglycerides in your blood. This test helps assess your risk of cardiovascular disease.</p>
+                        <p class="card-text"><strong>Price:</strong> $75</p>
+                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#testModal" data-test="Lipid">View Details</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Thyroid Function Test</h5>
+                        <p class="card-text">Thyroid function tests are blood tests that check how well your thyroid is working. They measure levels of thyroid hormones and help diagnose thyroid disorders.</p>
+                        <p class="card-text"><strong>Price:</strong> $85</p>
+                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#testModal" data-test="Thyroid">View Details</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Electrolytes Panel</h5>
+                        <p class="card-text">An electrolytes panel measures the levels of minerals in your blood, such as sodium, potassium, and chloride. It helps assess hydration status and kidney function.</p>
+                        <p class="card-text"><strong>Price:</strong> $40</p>
+                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#testModal" data-test="Electrolytes">View Details</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Liver Function Test</h5>
+                        <p class="card-text">A liver function test checks various enzymes and proteins in your blood to assess liver health and detect liver diseases.</p>
+                        <p class="card-text"><strong>Price:</strong> $60</p>
+                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#testModal" data-test="LiverPanel">View Details</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Diabetes Panel</h5>
+                        <p class="card-text">A diabetes panel includes tests like fasting glucose and HbA1c to evaluate blood sugar levels and diagnose diabetes or prediabetes.</p>
+                        <p class="card-text"><strong>Price:</strong> $70</p>
+                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#testModal" data-test="DiabetesPanel">View Details</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Comprehensive Metabolic Panel (CMP)</h5>
+                        <p class="card-text">The CMP is a group of tests that measure glucose, calcium, electrolytes, and kidney and liver function to provide a comprehensive overview of your metabolic health.</p>
+                        <p class="card-text"><strong>Price:</strong> $90</p>
+                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#testModal" data-test="ComprehensiveMetabolicPanel">View Details</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Prothrombin Time (PT)</h5>
+                        <p class="card-text">This test measures how long it takes for your blood to clot. It is used to monitor patients on anticoagulant therapy or to assess bleeding disorders.</p>
+                        <p class="card-text"><strong>Price:</strong> $50</p>
+                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#testModal" data-test="ProthrombinTime">View Details</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">C-Reactive Protein (CRP) Test</h5>
+                        <p class="card-text">The CRP test measures the level of C-reactive protein in your blood, which can indicate inflammation or infection in the body.</p>
+                        <p class="card-text"><strong>Price:</strong> $45</p>
+                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#testModal" data-test="CReactiveProtein">View Details</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Vitamin D Level Test</h5>
+                        <p class="card-text">This test measures the level of vitamin D in your blood, which is essential for bone health and overall well-being.</p>
+                        <p class="card-text"><strong>Price:</strong> $55</p>
+                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#testModal" data-test="VitaminDLevels">View Details</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Test Details Modal -->
+    <div class="modal fade" id="testModal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Test Details</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-8">
+                            <div id="testDescription"></div>
+                        </div>
+                        <div class="col-md-4">
+                            <button class="btn btn-success w-100" data-bs-toggle="modal" data-bs-target="#bookingModal">Book Lab Test</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Booking Modal -->
+    <div class="modal fade" id="bookingModal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Book Your Test</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="bookingForm">
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label">Full Name</label>
+                                <input type="text" class="form-control" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label">Email</label>
+                                <input type="email" class="form-control" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label">Phone</label>
+                                <input type="tel" class="form-control" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label">Preferred Date</label>
+                                <input type="date" class="form-control" required>
+                            </div>
+                            <div class="col-12 mb-3">
+                                <label class="form-label">Address</label>
+                                <textarea class="form-control" rows="3" required></textarea>
+                            </div>
+                            <div class="col-12 mb-3">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" required>
+                                    <label class="form-check-label">
+                                        I agree to the terms and conditions
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="card mt-4">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Order Summary</h5>
+                                        <p class="card-text" id="selectedTest"></p>
+                                        
+                                        <hr>
+                                        
+
+                                        
+                                        
+                                        <!-- Submit Booking Button -->
+                                        <div class="d-grid mt-2">
+                                            <button type="submit" class="btn btn-primary">Submit Booking</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Razorpay Payment Button Script -->
+                        <script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_NsAjk7JAoiQBrY" async></script>
+                        
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../static/scripts/script.js"></script>
+
+
+
+    
+</body>
+</html>
